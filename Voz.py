@@ -38,16 +38,35 @@ class MainWindow(tk.Frame):
                 elif 'alfabeto' in text.lower():
                     PA_Alfabeto()
                 elif 'suma' in text.lower():
-                    PA_Suma()
+                     palabra = text.replace("suma", "")
+                     if palabra == "":
+                       self.label.config(text='No se pudo entender lo que dijiste, Favor de Repetirlo')
+                     else:
+                        PA_Suma(palabra)
                 elif 'resta' in text.lower():
-                    PA_Resta()
+                    palabra = text.replace("resta", "")
+                    if palabra == "":
+                        self.label.config(text='No se pudo entender lo que dijiste, Favor de Repetirlo')
+                    else:
+                        PA_Resta(palabra)
             elif 'deletrea' in text.lower() or 'deletreame' in text.lower():
-                palabra = text.replace("deletrea ", "")              
-                PA_Deletrea(palabra)
+                palabra = text.replace("deletrea ", "")
+                if palabra == "":
+                       self.label.config(text='No se pudo entender lo que dijiste, Favor de Repetirlo')
+                else:              
+                    PA_Deletrea(palabra)
             elif 'suma' in text.lower():
-                    PA_Suma()
+                palabra = text.replace("suma", "")
+                if palabra == "":
+                    self.label.config(text='No se pudo entender lo que dijiste, Favor de Repetirlo')
+                else:
+                    PA_Suma(palabra)
             elif 'resta' in text.lower():
-                    PA_Resta()
+                palabra = text.replace("resta", "")
+                if palabra == "":
+                    self.label.config(text='No se pudo entender lo que dijiste, Favor de Repetirlo')
+                else:
+                    PA_Resta(palabra)
 
         except sr.UnknownValueError:
             self.label.config(text='No se pudo entender lo que dijiste')
@@ -58,14 +77,16 @@ class MainWindow(tk.Frame):
 
 def PA_Vocales():
     print('Se muestra las vocales')
-    subprocess.run(['python', 'pantalla.py', 'vocales'])
+    subprocess.run(['python', 'pantalla.py', 'vocales',' '])
 def PA_Alfabeto():
     print('Se muestra el alfabeto')
-    subprocess.run(['python', 'pantalla.py', 'alfabeto'])
-def PA_Suma():
+    subprocess.run(['python', 'pantalla.py', 'alfabeto',' '])
+def PA_Suma(palabra):
     print('Se muestra el resultado de la "Suma"')
-def PA_Resta():
+    subprocess.run(['python', 'pantalla.py', 'suma',palabra])
+def PA_Resta(palabra):
     print('Se muestra el resultado de la "Resta"')
+    subprocess.run(['python', 'pantalla.py', 'resta',palabra])
 def PA_Deletrea(palabra):
     print('Se envia la palabra '+palabra)
     subprocess.run(['python', 'pantalla.py', 'deletrea',palabra])

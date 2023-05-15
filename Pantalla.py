@@ -1,6 +1,45 @@
 import pygame
 import sys
 
+def DosDigitos(resultado):
+    # Obtener el primer dígito dividiendo el número entre 10
+    primero = resultado // 10
+
+    # Obtener el segundo dígito obteniendo el resto de la división entre 10
+    segundo = resultado % 10
+
+    # Imprimir cada dígito en una línea separada
+    mostrar_suma(primero)
+    Borrar()
+    mostrar_suma(segundo)
+    Borrar()
+    
+def mostrar_suma(letra):
+    if letra == '1' or letra == 1:
+        Mostrar(uno_shape)
+    elif letra == '2'or letra == 2:
+        Mostrar(dos_shape)
+    elif letra == '3'or letra == 3:
+        Mostrar(tres_shape)
+    elif letra == '4'or letra == 4:
+        Mostrar(cuatro_shape)
+    elif letra == '5'or letra == 5:
+        Mostrar(cinco_shape)
+    elif letra == '6'or letra == 6:
+        Mostrar(seis_shape)
+    elif letra == '7' or letra == 7:
+        Mostrar(siete_shape)
+    elif letra == '8'or letra == 8:
+        Mostrar(ocho_shape)
+    elif letra == '9'or letra == 9:
+        Mostrar(nueve_shape)
+    elif letra == '0'or letra == 0:
+        Mostrar(cero_shape)
+    elif letra == '-':
+        Mostrar(resta_shape)
+    elif letra == '+':
+        Mostrar(suma_shape)
+    Borrar()
 # Función que muestra la forma de deletreo correspondiente a una letra
 def mostrar_forma_deletreo(letra):
         if letra == 'a' or letra == 'á' or letra == 'A':
@@ -364,6 +403,137 @@ z_shape = [
     [0, 1, 1, 1, 1, 1, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
 ]
+cero_shape = [
+    [0, 0, 1, 1, 1, 1, 0, 0],
+    [0, 1, 0, 0, 0, 0, 1, 0],
+    [0, 1, 0, 0, 0, 0, 1, 0],
+    [0, 1, 0, 0, 0, 0, 1, 0],
+    [0, 1, 0, 0, 0, 0, 1, 0],
+    [0, 1, 0, 0, 0, 0, 1, 0],
+    [0, 1, 0, 0, 0, 0, 1, 0],
+    [0, 0, 1, 1, 1, 1, 0, 0],
+]
+uno_shape =[
+    [0, 0, 0, 1, 1, 0, 0, 0],
+    [0, 0, 1, 1, 1, 0, 0, 0],
+    [0, 0, 0, 1, 1, 0, 0, 0],
+    [0, 0, 0, 1, 1, 0, 0, 0],
+    [0, 0, 0, 1, 1, 0, 0, 0],
+    [0, 0, 0, 1, 1, 0, 0, 0],
+    [0, 0, 0, 1, 1, 0, 0, 0],
+    [0, 0, 1, 1, 1, 1, 0, 0],
+]
+dos_shape =[
+    [0, 0, 0, 1, 1, 1, 0, 0],
+    [0, 0, 1, 0, 0, 0, 1, 0],
+    [0, 0, 0, 0, 0, 0, 1, 0],
+    [0, 0, 0, 0, 0, 1, 0, 0],
+    [0, 0, 0, 0, 1, 0, 0, 0],
+    [0, 0, 0, 1, 0, 0, 0, 0],
+    [0, 0, 1, 0, 0, 0, 0, 0],
+    [0, 0, 1, 1, 1, 1, 1, 0],
+]
+tres_shape =[
+    [0, 0, 0, 1, 1, 1, 0, 0],
+    [0, 0, 1, 0, 0, 0, 1, 0],
+    [0, 0, 0, 0, 0, 0, 1, 0],
+    [0, 0, 0, 0, 1, 1, 0, 0],
+    [0, 0, 0, 0, 0, 0, 1, 0],
+    [0, 0, 0, 0, 0, 0, 1, 0],
+    [0, 0, 1, 0, 0, 0, 1, 0],
+    [0, 0, 0, 1, 1, 1, 0, 0],
+    ]
+cuatro_shape =[
+    [0, 0, 0, 0, 1, 1, 0, 0],
+    [0, 0, 0, 1, 0, 1, 0, 0],
+    [0, 0, 1, 0, 0, 1, 0, 0],
+    [0, 1, 0, 0, 0, 1, 0, 0],
+    [0, 1, 1, 1, 1, 1, 1, 0],
+    [0, 0, 0, 0, 0, 1, 0, 0],
+    [0, 0, 0, 0, 0, 1, 0, 0],
+    [0, 0, 0, 0, 0, 1, 0, 0],
+    ]
+cinco_shape =[
+    [0,0,1,1,1,1,0,0],
+    [0,1,0,0,0,0,0,0],
+    [0,1,0,0,0,0,0,0],
+    [0,0,1,1,1,0,0,0],
+    [0,0,0,0,0,1,0,0],
+    [0,0,0,0,0,1,0,0],
+    [0,1,0,0,0,1,0,0],
+    [0,0,1,1,1,0,0,0],
+    ]
+seis_shape =[
+    [0,0,1,1,1,1,0,0],
+    [0,1,0,0,0,0,1,0],
+    [0,1,0,0,0,0,0,0],
+    [0,1,1,1,1,1,0,0],
+    [0,1,0,0,0,0,1,0],
+    [0,1,0,0,0,0,1,0],
+    [0,1,0,0,0,0,1,0],
+    [0,0,1,1,1,1,0,0],
+    ]
+siete_shape =[
+    [0,0,1,1,1,1,1,0],
+    [0,0,0,0,0,0,1,0],
+    [0,0,0,0,0,1,0,0],
+    [0,0,0,0,1,1,0,0],
+    [0,0,0,1,1,0,0,0],
+    [0,0,0,1,0,0,0,0],
+    [0,0,0,1,0,0,0,0],
+    [0,0,0,1,0,0,0,0],
+    ]
+ocho_shape =[
+    [0,0,1,1,1,1,0,0],
+    [0,1,0,0,0,0,1,0],
+    [0,1,0,0,0,0,1,0],
+    [0,0,1,1,1,1,0,0],
+    [0,1,0,0,0,0,1,0],
+    [0,1,0,0,0,0,1,0],
+    [0,1,0,0,0,0,1,0],
+    [0,0,1,1,1,1,0,0],
+    ]
+nueve_shape =[
+    [0,0,1,1,1,1,0,0],
+    [0,1,0,0,0,0,1,0],
+    [0,1,0,0,0,0,1,0],
+    [0,1,0,0,0,0,1,0],
+    [0,0,1,1,1,1,1,0],
+    [0,0,0,0,0,0,1,0],
+    [0,1,0,0,0,0,1,0],
+    [0,0,1,1,1,1,0,0],
+    ]
+suma_shape =[
+    [0,0,0,0,0,0,0,0],
+    [0,0,0,1,1,0,0,0],
+    [0,0,0,1,1,0,0,0],
+    [0,1,1,1,1,1,1,0],
+    [0,1,1,1,1,1,1,0],
+    [0,0,0,1,1,0,0,0],
+    [0,0,0,1,1,0,0,0],
+    [0,0,0,0,0,0,0,0],
+    ]
+resta_shape =[
+    [0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0],
+    [0,1,1,1,1,1,1,0],
+    [0,1,1,1,1,1,1,0],
+    [0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0],
+    ]
+igual_shape = [
+    [0,0,0,0,0,0,0,0],
+    [0,1,1,1,1,1,1,0],
+    [0,1,1,1,1,1,1,0],
+    [0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0],
+    [0,1,1,1,1,1,1,0],
+    [0,1,1,1,1,1,1,0],
+    [0,0,0,0,0,0,0,0],
+]
+
 # Dibujado de la cuadrícula y de la letra A
 def draw_grid():
     for x in range(0, screen_width, cell_size):
@@ -414,5 +584,28 @@ while True:
     elif Peticion == 'deletrea':
             for letra in imp:
                 mostrar_forma_deletreo(letra)
+    elif Peticion == 'suma':
+        imp = imp.replace("más", "+")
+        imp = imp.replace("uno", "1")
+        resultado = eval(imp)
+        for letra in imp:
+            mostrar_suma(letra)
+        Mostrar(igual_shape)
+        if resultado < 10:
+            mostrar_suma(resultado)
+        else:
+            DosDigitos(resultado)
+    elif Peticion == 'resta':
+        imp = imp.replace("menos", "-")
+        imp = imp.replace("uno", "1")
+        resultado = eval(imp)
+        print(resultado)
+        if resultado >= 0:
+            for letra in imp:
+                mostrar_suma(letra)
+            Mostrar(igual_shape)
+            mostrar_suma(resultado)
+        else:
+            print("Prueba con otros numeros")
     pygame.quit()
     quit()
